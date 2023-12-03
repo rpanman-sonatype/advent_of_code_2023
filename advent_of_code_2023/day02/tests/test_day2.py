@@ -1,6 +1,6 @@
 import pytest
 
-from advent_of_code_2023.day02.day2 import (
+from advent_of_code_2023.day02.day02 import (
     game_id,
     game_record_is_valid,
     game_score,
