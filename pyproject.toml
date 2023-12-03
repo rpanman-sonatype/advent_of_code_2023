@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "advent-of-code-2023"
+version = "0.1.0"
+description = "My attempts at Advent of Code 2023"
+authors = ["Richard Panman <rpanman@sonatype.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^7.4.3"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.7.1"
+ruff = "^0.1.6"
+black = "^23.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+mypy_path = "advent_of_code_2023"
+strict = true
