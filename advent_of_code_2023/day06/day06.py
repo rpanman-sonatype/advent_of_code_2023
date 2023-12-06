@@ -1,12 +1,11 @@
 from functools import reduce
 from math import ceil, floor, sqrt
-from typing import Tuple
 
 t = 7
 d = 9
 
 
-def solve_quadratic(a: int, b: int, c: int) -> list[float, float]:
+def solve_quadratic(a: int, b: int, c: int) -> list[float]:
     d = (b**2) - (4 * a * c)
 
     sol1 = (-b - sqrt(d)) / (2 * a)
