@@ -67,9 +67,10 @@ def score_hands_part1(PUZZLE_EXAMPLE: list[str]) -> int:
     return score
 
 
-def get_hands(PUZZLE_EXAMPLE: list[str]) -> list[Hand]:
+def get_hands(PUZZLE_EXAMPLE: list[str], using_jokers: bool = False) -> list[Hand]:
     hands = [
-        Hand(line.split(" ")[0], int(line.split(" ")[1])) for line in PUZZLE_EXAMPLE
+        Hand(line.split(" ")[0], int(line.split(" ")[1], using_jokers))
+        for line in PUZZLE_EXAMPLE
     ]
 
     return hands
