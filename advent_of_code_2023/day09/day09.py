@@ -11,14 +11,15 @@ def get_diffs(puzzle: list[int]) -> int:
     return puzzle[-1] + get_diffs(diffs)
 
 
-assert get_diffs(puzzle=[int(a) for a in PUZZLE_EXAMPLE[0].split(" ")]) == 18
-assert get_diffs(puzzle=[int(a) for a in PUZZLE_EXAMPLE[1].split(" ")]) == 28
-assert get_diffs(puzzle=[int(a) for a in PUZZLE_EXAMPLE[2].split(" ")]) == 68
-
-
 def get_score(puzzle: list[str]) -> int:
     return sum([get_diffs([int(a) for a in line.split(" ")]) for line in puzzle])
 
 
+# Example
+assert get_diffs(puzzle=[int(a) for a in PUZZLE_EXAMPLE[0].split(" ")]) == 18
+assert get_diffs(puzzle=[int(a) for a in PUZZLE_EXAMPLE[1].split(" ")]) == 28
+assert get_diffs(puzzle=[int(a) for a in PUZZLE_EXAMPLE[2].split(" ")]) == 68
 assert get_score(PUZZLE_EXAMPLE) == 114
+
+# Part 1
 assert get_score(PUZZLE_INPUT) == 1921197370
